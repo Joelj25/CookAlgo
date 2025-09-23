@@ -41,7 +41,10 @@ const Navigation = ({ currentView, setCurrentView }) => {
               ].map(({ id, label, icon: Icon }) => (
                 <button
                   key={id}
-                  onClick={() => setCurrentView(id)}
+                  onClick={() => {
+                    console.log('Clicking navigation:', id); // Debug log
+                    setCurrentView(id);
+                  }}
                   data-testid={`nav-${id}-btn`}
                   className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 flex items-center space-x-2 ${
                     currentView === id
