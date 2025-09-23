@@ -1,0 +1,123 @@
+{
+  "summary": {
+    "tests_run": 19,
+    "tests_passed": 16,
+    "success_rate": 84.21052631578947
+  },
+  "results": [
+    {
+      "test_name": "Initialize Sample Data",
+      "status": "\u2705 PASSED",
+      "success": true,
+      "details": "Status: 200, Expected: 200, Response: {\n  \"message\": \"Sample data already exists\"\n}..."
+    },
+    {
+      "test_name": "Get All Recipes",
+      "status": "\u2705 PASSED",
+      "success": true,
+      "details": "Status: 200, Expected: 200, Response: [\n  {\n    \"id\": \"cc08db52-bd47-425d-8cef-89968f21995b\",\n    \"name\": \"Classic Pancakes\",\n    \"description\": \"Fluffy, delicious pancakes perfect for breakfast\",\n    \"ingredients\": [\n      \"2 cups all-pu..."
+    },
+    {
+      "test_name": "Sample Recipe IDs Retrieved",
+      "status": "\u2705 PASSED",
+      "success": true,
+      "details": "Found 3 recipe IDs"
+    },
+    {
+      "test_name": "Filter Recipes by Category",
+      "status": "\u2705 PASSED",
+      "success": true,
+      "details": "Status: 200, Expected: 200, Response: [\n  {\n    \"id\": \"cc08db52-bd47-425d-8cef-89968f21995b\",\n    \"name\": \"Classic Pancakes\",\n    \"description\": \"Fluffy, delicious pancakes perfect for breakfast\",\n    \"ingredients\": [\n      \"2 cups all-pu..."
+    },
+    {
+      "test_name": "Filter Recipes by Difficulty",
+      "status": "\u2705 PASSED",
+      "success": true,
+      "details": "Status: 200, Expected: 200, Response: [\n  {\n    \"id\": \"cc08db52-bd47-425d-8cef-89968f21995b\",\n    \"name\": \"Classic Pancakes\",\n    \"description\": \"Fluffy, delicious pancakes perfect for breakfast\",\n    \"ingredients\": [\n      \"2 cups all-pu..."
+    },
+    {
+      "test_name": "Get Specific Recipe",
+      "status": "\u2705 PASSED",
+      "success": true,
+      "details": "Status: 200, Expected: 200, Response: {\n  \"id\": \"cc08db52-bd47-425d-8cef-89968f21995b\",\n  \"name\": \"Classic Pancakes\",\n  \"description\": \"Fluffy, delicious pancakes perfect for breakfast\",\n  \"ingredients\": [\n    \"2 cups all-purpose flour\",\n..."
+    },
+    {
+      "test_name": "Create New Recipe",
+      "status": "\u2705 PASSED",
+      "success": true,
+      "details": "Status: 200, Expected: 200, Response: {\n  \"id\": \"fef7adee-05a7-4dae-8a14-523cc2825719\",\n  \"name\": \"Test Recipe\",\n  \"description\": \"A test recipe for API testing\",\n  \"ingredients\": [\n    \"1 cup test ingredient\",\n    \"2 tbsp test spice\"\n  ]..."
+    },
+    {
+      "test_name": "Update Recipe",
+      "status": "\u2705 PASSED",
+      "success": true,
+      "details": "Status: 200, Expected: 200, Response: {\n  \"id\": \"fef7adee-05a7-4dae-8a14-523cc2825719\",\n  \"name\": \"Updated Test Recipe\",\n  \"description\": \"A test recipe for API testing\",\n  \"ingredients\": [\n    \"1 cup test ingredient\",\n    \"2 tbsp test sp..."
+    },
+    {
+      "test_name": "Delete Recipe",
+      "status": "\u2705 PASSED",
+      "success": true,
+      "details": "Status: 200, Expected: 200, Response: {\n  \"message\": \"Recipe deleted successfully\"\n}..."
+    },
+    {
+      "test_name": "Get All Meal Plans",
+      "status": "\u2705 PASSED",
+      "success": true,
+      "details": "Status: 200, Expected: 200, Response: []..."
+    },
+    {
+      "test_name": "Get Meal Plan by Date",
+      "status": "\u2705 PASSED",
+      "success": true,
+      "details": "Status: 200, Expected: 200, Response: {\n  \"id\": \"fbbdc585-506c-4ab2-ba3f-3b387faa67c0\",\n  \"date\": \"2025-09-23\",\n  \"breakfast\": null,\n  \"lunch\": null,\n  \"dinner\": null,\n  \"snacks\": [],\n  \"created_at\": \"2025-09-23T14:24:50.215617Z\"\n}..."
+    },
+    {
+      "test_name": "Create Meal Plan",
+      "status": "\u2705 PASSED",
+      "success": true,
+      "details": "Status: 200, Expected: 200, Response: {\n  \"id\": \"355af40d-0e7c-4d0e-8608-b4cc62e10186\",\n  \"date\": \"2025-09-23\",\n  \"breakfast\": \"cc08db52-bd47-425d-8cef-89968f21995b\",\n  \"lunch\": \"651e8f4f-05f2-4a77-8918-06615f847fea\",\n  \"dinner\": \"9c97a37..."
+    },
+    {
+      "test_name": "Get Nutrition Logs by Date",
+      "status": "\u2705 PASSED",
+      "success": true,
+      "details": "Status: 200, Expected: 200, Response: {\n  \"date\": \"2025-09-23\",\n  \"logs\": [],\n  \"totals\": {\n    \"calories\": 0,\n    \"protein\": 0,\n    \"carbs\": 0,\n    \"fats\": 0\n  }\n}..."
+    },
+    {
+      "test_name": "Create Nutrition Log",
+      "status": "\u2705 PASSED",
+      "success": true,
+      "details": "Status: 200, Expected: 200, Response: {\n  \"id\": \"6191431a-32a7-43cd-9a88-2e4199e2e126\",\n  \"date\": \"2025-09-23\",\n  \"meal_type\": \"breakfast\",\n  \"recipe_id\": \"cc08db52-bd47-425d-8cef-89968f21995b\",\n  \"servings\": 1.0,\n  \"calories\": 320.0,\n  \"..."
+    },
+    {
+      "test_name": "AI Chat Request",
+      "status": "\u274c FAILED",
+      "success": false,
+      "details": "Exception: HTTPSConnectionPool(host='cookalgo-app.preview.emergentagent.com', port=443): Read timed out. (read timeout=10)"
+    },
+    {
+      "test_name": "Get Chat History",
+      "status": "\u2705 PASSED",
+      "success": true,
+      "details": "Status: 200, Expected: 200, Response: []..."
+    },
+    {
+      "test_name": "AI Nutrition Analysis",
+      "status": "\u274c FAILED",
+      "success": false,
+      "details": "Exception: HTTPSConnectionPool(host='cookalgo-app.preview.emergentagent.com', port=443): Read timed out. (read timeout=10)"
+    },
+    {
+      "test_name": "Get Non-existent Recipe",
+      "status": "\u274c FAILED",
+      "success": false,
+      "details": "Exception: HTTPSConnectionPool(host='cookalgo-app.preview.emergentagent.com', port=443): Read timed out. (read timeout=10)"
+    },
+    {
+      "test_name": "Create Recipe with Invalid Data",
+      "status": "\u2705 PASSED",
+      "success": true,
+      "details": "Status: 422, Expected: 422, Response: {\n  \"detail\": [\n    {\n      \"type\": \"missing\",\n      \"loc\": [\n        \"body\"\n      ],\n      \"msg\": \"Field required\",\n      \"input\": null,\n      \"url\": \"https://errors.pydantic.dev/2.11/v/missing\"\n    ..."
+    }
+  ]
+}
