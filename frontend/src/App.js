@@ -1110,6 +1110,12 @@ function App() {
   const [recipes, setRecipes] = useState([]);
   const [nutritionData, setNutritionData] = useState(null);
 
+  // Debug function to force re-render
+  const handleViewChange = (newView) => {
+    console.log('Setting view from', currentView, 'to', newView);
+    setCurrentView(newView);
+  };
+
   // Initialize sample data and load recipes
   useEffect(() => {
     const initializeApp = async () => {
