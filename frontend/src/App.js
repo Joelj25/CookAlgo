@@ -1137,17 +1137,19 @@ function App() {
   }, []);
 
   const renderCurrentView = () => {
+    console.log('Current view:', currentView); // Debug log
+    
     switch (currentView) {
       case 'recipes':
-        return <RecipeManagement recipes={recipes} setRecipes={setRecipes} />;
+        return <RecipeManagement key="recipes" recipes={recipes} setRecipes={setRecipes} />;
       case 'meal-planning':
-        return <MealPlanning recipes={recipes} />;
+        return <MealPlanning key="meal-planning" recipes={recipes} />;
       case 'nutrition':
-        return <NutritionTracking recipes={recipes} />;
+        return <NutritionTracking key="nutrition" recipes={recipes} />;
       case 'ai-assistant':
-        return <AIAssistant />;
+        return <AIAssistant key="ai-assistant" />;
       default:
-        return <Dashboard recipes={recipes} nutritionData={nutritionData} />;
+        return <Dashboard key="dashboard" recipes={recipes} nutritionData={nutritionData} />;
     }
   };
 
