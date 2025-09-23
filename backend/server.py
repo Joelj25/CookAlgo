@@ -114,7 +114,11 @@ def prepare_for_mongo(data):
     return data
 
 def parse_from_mongo(item):
-    """Parse ISO strings back to datetime objects from MongoDB"""
+    """Parse ISO strings back to datetime objects from MongoDB and remove _id"""
+    # Remove MongoDB's _id field to avoid ObjectId serialization issues
+    if '_id' in item:
+        del item['_id']
+    
     if isinstance(item.get('created_at'), str):
         item['created_at'] = datetime.fromisoformat(item['created_at'])
     if isinstance(item.get('logged_at'), str):
